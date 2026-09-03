@@ -11,15 +11,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
+<body class="home-v2 home-v24">
 <a class="skip-link" href="#main">Skip to content</a>
 
-<header class="site-header">
+<header class="site-header home-header">
   <div class="wrap nav-row">
-    <a class="logo" href="/"><span class="logo-mark" aria-hidden="true"></span>NEURO-AMEA</a>
+    <a class="logo logo-official" href="/"><img src="https://optim.tildacdn.com/tild3036-3066-4738-b038-323738303438/-/resize/322x/-/format/webp/logo.png.webp" alt="Neuro-Amea"></a>
     <nav class="primary-nav" id="primary-nav">
       <ul>
-        <li><a href="system/">System</a></li>
+        <li><a href="system/">System</a></li><li><a href="#process">How it works</a></li><li><a href="#output">Output</a></li>
         <li class="has-dropdown">
           <button class="nav-btn" aria-expanded="false">Applications <span aria-hidden="true">▾</span></button>
           <div class="dropdown">
@@ -39,293 +39,128 @@
         </li>
         <li><a href="about/">About</a></li>
       </ul>
-      <div class="nav-cta">
-        <a class="cta" href="contact/">Request Information</a>
-      </div>
+      <div class="nav-cta"><a class="cta" href="contact/">Request Information</a></div>
     </nav>
-    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
-      <span></span><span></span><span></span>
-    </button>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>
   </div>
 </header>
 
 <main id="main">
-
-  <!-- HOME 01 — HERO -->
-  <section class="hero">
-    <div class="wrap hero-grid">
-      <div>
-        <p class="eyebrow">NEUROPHYSIOLOGICAL ASSESSMENT</p>
-        <h1>Objective Neurophysiological Assessment for Clinical Practice</h1>
-        <p class="lede">Neuro-Amea provides specialists with additional physiological data on brain functional state through non-invasive DC potential measurement.</p>
-        <div class="btn-row">
-          <a class="cta" href="system/">Explore the System</a>
-          <a class="cta cta-ghost" href="contact/">Request Information</a>
+  <section class="v24-hero modern-hero" id="top">
+    <canvas class="hero-neural-canvas" data-hero-neural aria-hidden="true"></canvas>
+    <div class="modern-hero-aurora" aria-hidden="true"></div>
+    <div class="modern-hero-grid" aria-hidden="true"></div>
+    <div class="wrap modern-hero-shell">
+      <div class="modern-hero-copy reveal">
+        <p class="modern-kicker"><span></span> Neurophysiological assessment system</p>
+        <h1>Objective data.<br><span>Another layer</span><br>for clinical practice.</h1>
+        <p class="modern-lede">Neuro-Amea records slow cortical DC potentials and turns them into structured visual information for professional review.</p>
+        <div class="modern-actions">
+          <a class="modern-btn modern-btn-primary" href="system/">Explore the system <i>↗</i></a>
+          <a class="modern-btn modern-btn-secondary" href="#output">View example output <i>↓</i></a>
         </div>
-        <p class="hero-meta">Clinical Practice · Rehabilitation · Research</p>
+        <div class="modern-proof-row" aria-label="System characteristics">
+          <div><b>5</b><span>recording channels</span></div>
+          <div><b>DC</b><span>potential measurement</span></div>
+          <div><b>01</b><span>integrated workflow</span></div>
+        </div>
       </div>
-      <div style="position:relative;">
-        <div class="media-frame wide reveal">
-          <span class="placeholder-label">NEURO-AMEA DEVICE PHOTO — TO BE ADDED</span>
-        </div>
-        <span class="annot" style="top:14%; left:8%;">CH 01–05</span>
-        <span class="annot" style="top:46%; right:6%;">RECORDER UNIT</span>
-        <span class="annot" style="bottom:10%; left:12%;">SCALP SENSOR SET</span>
+
+      <div class="v31-neural-stage reveal" aria-hidden="true">
+  <div class="v31-neural-aura"></div>
+  <canvas id="v31BrainCanvas"></canvas>
+  <div class="v31-neural-caption">
+    <small>NEURAL SIGNAL FIELD</small>
+    <strong>Dynamic visualization</strong>
+  </div>
+</div>
+
+      <div class="modern-hero-rail reveal">
+        <span>NON-INVASIVE</span><i></i><span>STRUCTURED RECORDING</span><i></i><span>VISUAL OUTPUT</span><i></i><span>PROFESSIONAL INTERPRETATION</span>
       </div>
     </div>
   </section>
 
-  <hr class="hr">
-
-  <!-- HOME 02 — VALUE -->
-  <section>
+  <section class="neo-value">
     <div class="wrap">
-      <div class="section-head center">
-        <h2>Add Another Layer to the Clinical Picture</h2>
-      </div>
-      <div class="equation reveal">
-        <div class="eq-item"><span class="data-label">01</span>Clinical Observation</div>
-        <span class="eq-op">+</span>
-        <div class="eq-item"><span class="data-label">02</span>Standardized Assessment</div>
-        <span class="eq-op">+</span>
-        <div class="eq-item"><span class="data-label">03</span>Neurophysiological Data</div>
-      </div>
-      <div style="display:flex; justify-content:center;">
-        <div class="eq-op" aria-hidden="true">↓</div>
-      </div>
-      <div style="display:flex; justify-content:center; margin-top:8px;">
-        <div class="eq-item eq-result reveal" style="text-align:center; min-width:280px;">Professional Interpretation</div>
-      </div>
-      <p class="lede" style="text-align:center; margin:36px auto 0;">Neuro-Amea is designed to complement established assessment methods — not replace them.</p>
+      <div class="neo-section-intro reveal"><p class="neo-index">02 / WHY IT MATTERS</p><h2>Add physiological context<br>to the information you already use.</h2><p class="ux-lead">Neuro-Amea does not replace established assessment. It adds recorded physiological information to clinical observation and standardized methods.</p></div>
+      <div class="neo-layer-system reveal"><div class="neo-layer-card l1"><span>01</span><strong>Clinical<br>Observation</strong><small>History · signs · context</small></div><div class="neo-plus">+</div><div class="neo-layer-card l2"><span>02</span><strong>Standardized<br>Assessment</strong><small>Tests · scales · performance</small></div><div class="neo-plus">+</div><div class="neo-layer-card l3"><span>03</span><strong>Neurophysiological<br>Data</strong><small>Recorded DC potentials</small></div><div class="neo-vector">↓</div><div class="neo-layer-result"><span>PROFESSIONAL INTERPRETATION</span><b>More context.<br>Not a replacement.</b></div></div>
     </div>
   </section>
 
-  <hr class="hr">
 
-  <!-- HOME 03 — HOW IT WORKS -->
-  <section>
-    <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">PROCESS</p>
-        <h2>From Measurement to Information</h2>
-        <p class="lede">A structured process turns recorded DC potentials into information that can be reviewed by a specialist.</p>
-      </div>
-      <div class="chain reveal" data-signal-chain>
-        <div class="chain-step">
-          <span class="data-label">PATIENT / SENSORS</span>
-          <h4>Sensors placed</h4>
-          <p>Measurement points are positioned according to methodology.</p>
-        </div>
-        <div class="chain-step">
-          <span class="data-label">RECORD</span>
-          <h4>Record</h4>
-          <p>DC potentials are recorded.</p>
-        </div>
-        <div class="chain-step">
-          <span class="data-label">PROCESS</span>
-          <h4>Process</h4>
-          <p>Measurements are processed by the software.</p>
-        </div>
-        <div class="chain-step">
-          <span class="data-label">VISUALIZE</span>
-          <h4>Visualize</h4>
-          <p>Data is presented as maps and numerical indicators.</p>
-        </div>
-        <div class="chain-step">
-          <span class="data-label">INTERPRET</span>
-          <h4>Interpret</h4>
-          <p>Results are reviewed within professional context.</p>
-        </div>
-      </div>
+  <section class="neo-output" id="output">
+    <div class="wrap neo-output-grid">
+      <div class="neo-output-copy reveal"><p class="neo-index">03 / REAL OUTPUT</p><h2>See what the<br>system produces.</h2><p>A real example from Neuro-Amea materials: recorded information presented visually for specialist review.</p><div class="neo-chipset"><span>Visual maps</span><span>Numerical indicators</span><span>Structured results</span></div></div>
+      <div class="neo-output-panel reveal"><div class="neo-output-top"><span>NEURO—AMEA / EXAMPLE OUTPUT</span><span>REAL MATERIAL</span></div><a class="neo-map-stage neo-real-output-stage" href="assets/img/output-real.png" target="_blank" rel="noopener"><div class="neo-real-output-glass"><img src="assets/img/output-real.png" alt="Example Neuro-Amea assessment output" loading="lazy"><div class="neo-scanline"></div><span class="neo-data-float df1">REAL OUTPUT</span><span class="neo-data-float df2">OPEN ↗</span></div></a><p class="neo-output-source">Example output from Neuro-Amea materials · click to enlarge.</p></div>
     </div>
   </section>
 
-  <hr class="hr">
+  <section class="neo-process" id="process">
+    <div class="wrap"><div class="neo-process-head reveal"><p class="neo-index">04 / HOW IT WORKS</p><div><h2>From signal<br>to specialist review.</h2></div><p>A clear five-step path from sensor placement to information that can be interpreted in professional context.</p></div>
+      <div class="neo-flow reveal" data-signal-chain><div class="neo-flow-line"><i></i></div><article><span>01</span><b>Prepare</b><p>Position sensors according to methodology.</p></article><article><span>02</span><b>Record</b><p>Record DC potentials through five channels.</p></article><article><span>03</span><b>Process</b><p>Process measurements in the software.</p></article><article><span>04</span><b>Visualize</b><p>Review maps and numerical indicators.</p></article><article><span>05</span><b>Interpret</b><p>Consider results in professional context.</p></article></div>
+    </div>
+  </section>
 
-  <!-- HOME 04 — RESULT -->
-  <section>
-    <div class="wrap">
-      <div class="grid grid-2" style="align-items:center;">
-        <div>
-          <p class="eyebrow">OUTPUT</p>
-          <h2>See Brain Functional State as Data</h2>
-          <p class="lede">Neuro-Amea transforms recorded slow electrical brain activity into visual maps, numerical indicators and structured results that can be reviewed by a specialist.</p>
-          <div class="badge-list">
-            <span class="badge">OVERALL LEVEL</span>
-            <span class="badge">REGIONAL DISTRIBUTION</span>
-            <span class="badge">INTERHEMISPHERIC PATTERN</span>
-            <span class="badge">FUNCTIONAL RESPONSE</span>
-            <span class="badge">COMPARISON OVER TIME</span>
-          </div>
-          <div class="timeline">
-            <div class="timeline-point"><span class="data-label">BASELINE</span></div>
-            <div class="timeline-point"><span class="data-label">FUNCTIONAL CONDITION</span></div>
-            <div class="timeline-point"><span class="data-label">FOLLOW-UP</span></div>
+  <section class="neo-applications">
+    <div class="wrap"><div class="neo-section-intro reveal"><p class="neo-index">06 / APPLICATIONS</p><h2>Choose your<br>professional context.</h2><p class="ux-lead">Start with the way you work. Each section explains where Neuro-Amea can add physiological context.</p></div><div class="neo-app-grid"><a href="applications/neuropsychology/index.html" class="neo-app reveal"><span>01</span><h3>Neuropsychology</h3><p>Add physiological context to cognitive and behavioral assessment.</p><i>Explore ↗</i></a><a href="applications/neurology/index.html" class="neo-app reveal"><span>02</span><h3>Neurology</h3><p>Review an additional neurophysiological layer within a broader neurological context.</p><i>Explore ↗</i></a><a href="applications/rehabilitation/index.html" class="neo-app reveal"><span>03</span><h3>Rehabilitation</h3><p>Use repeated measurements alongside functional outcomes over time.</p><i>Explore ↗</i></a><a href="applications/research/index.html" class="neo-app reveal"><span>04</span><h3>Research</h3><p>Use structured DC potential recording within research protocols.</p><i>Explore ↗</i></a></div></div>
+  </section>
+
+  <section class="neo-system">
+    <div class="wrap neo-system-grid">
+      <div class="neo-system-visual reveal">
+        <div class="neo-system-orbit">
+<div class="system-ambient system-ambient-a"></div><div class="system-ambient system-ambient-b"></div>
+          <div class="neo-system-glass">
+            <img src="assets/img/966A1809_1.jpg" alt="Neuro-Amea 12-channel neuro-metabolic activity mapper">
+            <span>12-CHANNEL SYSTEM</span>
           </div>
         </div>
-        <div class="media-frame square reveal">
-          <span class="placeholder-label">NEURO-AMEA ASSESSMENT OUTPUT — TO BE ADDED</span>
-        </div>
+        
+        <div class="neo-system-tag t1">RECORDER</div><div class="neo-system-tag t2">SENSORS</div><div class="neo-system-tag t3">SOFTWARE</div>
       </div>
-      <p class="notice" style="margin-top:28px;">Illustrative visualization based on Neuro-Amea assessment outputs.</p>
+      <div class="neo-system-copy reveal">
+        <p class="neo-index">07 / SYSTEM</p>
+        <h2>More than a<br>measurement device.</h2>
+        <p>Neuro-Amea brings the hardware, software, methodology and professional support into one compact assessment system.</p>
+        <div class="neo-system-list"><span>Recorder</span><span>Sensors</span><span>Software</span><span>Methodology</span><span>Training & Support</span></div>
+        <a class="neo-btn neo-btn-dark" href="system/">Explore the System <span>↗</span></a>
+      </div>
     </div>
   </section>
 
-  <hr class="hr">
-
-  <!-- HOME 05 — APPLICATIONS -->
-  <section>
+  <section class="neo-science">
     <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">APPLICATIONS</p>
-        <h2>One Technology. Different Areas of Practice.</h2>
-      </div>
-      <ul class="app-list">
-        <li>
-          <a class="app-row reveal" href="applications/neuropsychology/">
-            <span class="app-row-num">01</span>
-            <span class="app-row-title">Neuropsychology</span>
-            <span class="data-label">→</span>
-          </a>
-          <p class="app-row-desc">Additional neurophysiological information alongside cognitive and behavioral assessment.</p>
-        </li>
-        <li>
-          <a class="app-row reveal" href="applications/neurology/">
-            <span class="app-row-num">02</span>
-            <span class="app-row-title">Neurology</span>
-            <span class="data-label">→</span>
-          </a>
-          <p class="app-row-desc">Another source of neurophysiological information within a broader neurological context.</p>
-        </li>
-        <li>
-          <a class="app-row reveal" href="applications/rehabilitation/">
-            <span class="app-row-num">03</span>
-            <span class="app-row-title">Rehabilitation</span>
-            <span class="data-label">→</span>
-          </a>
-          <p class="app-row-desc">Repeated physiological measurements that can be reviewed alongside functional outcomes.</p>
-        </li>
-        <li>
-          <a class="app-row reveal" href="applications/research/">
-            <span class="app-row-num">04</span>
-            <span class="app-row-title">Research</span>
-            <span class="data-label">→</span>
-          </a>
-          <p class="app-row-desc">Structured DC potential recording within research protocols.</p>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <hr class="hr">
-
-  <!-- HOME 06 — SYSTEM -->
-  <section>
-    <div class="wrap grid grid-2" style="align-items:center;">
-      <div class="media-frame reveal">
-        <span class="placeholder-label">SYSTEM COMPONENTS PHOTO — TO BE ADDED</span>
-      </div>
-      <div>
-        <p class="eyebrow">SYSTEM</p>
-        <h2>More Than a Measurement Device</h2>
-        <div class="equation" style="justify-content:flex-start; padding:24px 0;">
-          <div class="eq-item">Recorder</div>
-          <span class="eq-op">·</span>
-          <div class="eq-item">Sensors</div>
-          <span class="eq-op">·</span>
-          <div class="eq-item">Software</div>
-          <span class="eq-op">·</span>
-          <div class="eq-item">Methodology</div>
-          <span class="eq-op">·</span>
-          <div class="eq-item">Training & Support</div>
-        </div>
-        <a class="cta cta-ghost" href="system/">Explore the System</a>
+      <div class="neo-science-head reveal"><p class="neo-index">08 / EVIDENCE & CONTEXT</p><h2>Go deeper where<br>you need to.</h2><p>Understand the signal, review the literature, or see practical examples.</p></div>
+      <div class="neo-science-grid">
+        <a href="dc-potentials/" class="neo-science-card reveal"><span>UNDERSTAND THE SIGNAL</span><h3>DC Potentials</h3><p>Ultra-slow electrical activity and the physiological context around its measurement.</p><b>Explore science ↗</b></a>
+        <a href="publications/" class="neo-science-card reveal"><span>REVIEW THE EVIDENCE</span><h3>Research & Publications</h3><p>A structured library of relevant scientific sources and methodological background.</p><b>View publications ↗</b></a>
+        <a href="clinical-cases/" class="neo-science-card reveal"><span>SEE IT IN PRACTICE</span><h3>Clinical Cases</h3><p>Recorded findings separated clearly from professional interpretation and clinical context.</p><b>View cases ↗</b></a>
       </div>
     </div>
   </section>
 
-  <hr class="hr">
-
-  <!-- HOME 07 — SCIENCE -->
-  <section>
-    <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">SCIENCE</p>
-        <h2>Built on Neurophysiology</h2>
-      </div>
-      <div class="grid grid-3">
-        <a class="plain-card reveal" href="dc-potentials/" style="text-decoration:none; color:inherit;">
-          <span class="data-label">01 — SIGNAL</span>
-          <h3>DC Potentials</h3>
-          <p>Ultra-slow electrical activity and what it can tell a specialist.</p>
-        </a>
-        <a class="plain-card reveal" href="publications/" style="text-decoration:none; color:inherit;">
-          <span class="data-label">02 — LITERATURE</span>
-          <h3>Research & Publications</h3>
-          <p>The scientific foundation behind the methodology.</p>
-        </a>
-        <a class="plain-card reveal" href="clinical-cases/" style="text-decoration:none; color:inherit;">
-          <span class="data-label">03 — PRACTICE</span>
-          <h3>Clinical Cases</h3>
-          <p>How recorded findings sit alongside professional interpretation.</p>
-        </a>
-      </div>
+  <section class="neo-final">
+    <div class="neo-final-grid" aria-hidden="true"></div>
+    <div class="wrap neo-final-inner reveal">
+      <p>NEURO—AMEA / PROFESSIONAL USE</p>
+      <h2>Is Neuro-Amea relevant<br>to your practice<br>or research?</h2><p class="neo-final-note">Tell us about your work. We’ll provide system information, application details and next steps.</p>
+      <a class="neo-btn neo-btn-light" href="contact/">Request Information <span>↗</span></a>
     </div>
   </section>
-
-  <!-- HOME 08 — FINAL CTA -->
-  <section class="final-cta">
-    <div class="wrap">
-      <div class="section-head center">
-        <h2>Explore What Neuro-Amea Could Add to Your Practice</h2>
-        <p class="lede" style="margin:0 auto;">For clinical practice, rehabilitation, research and professional organizations.</p>
-      </div>
-      <a class="cta" href="contact/">Request Information</a>
-    </div>
-  </section>
-
 </main>
 
-<footer class="site-footer">
+<footer class="site-footer neo-footer">
   <div class="wrap">
     <div class="footer-grid">
-      <div>
-        <a class="logo" href="/"><span class="logo-mark" aria-hidden="true"></span>NEURO-AMEA</a>
-        <p style="margin-top:16px; font-size:0.9rem; max-width:32ch;">Neurophysiological assessment technology for professional use.</p>
-      </div>
-      <div>
-        <h4>Applications</h4>
-        <ul>
-          <li><a href="applications/neuropsychology/">Neuropsychology</a></li>
-          <li><a href="applications/neurology/">Neurology</a></li>
-          <li><a href="applications/rehabilitation/">Rehabilitation</a></li>
-          <li><a href="applications/research/">Research</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Science</h4>
-        <ul>
-          <li><a href="dc-potentials/">DC Potentials</a></li>
-          <li><a href="publications/">Research & Publications</a></li>
-          <li><a href="clinical-cases/">Clinical Cases</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Company</h4>
-        <ul>
-          <li><a href="system/">System</a></li>
-          <li><a href="about/">About</a></li>
-          <li><a href="contact/">Contact</a></li>
-        </ul>
-      </div>
+      <div><a class="logo logo-official" href="/"><img src="https://optim.tildacdn.com/tild3036-3066-4738-b038-323738303438/-/resize/322x/-/format/webp/logo.png.webp" alt="Neuro-Amea"></a><p style="margin-top:16px; font-size:0.9rem; max-width:32ch;">Neurophysiological assessment technology for professional use.</p></div>
+      <div><h4>Applications</h4><ul><li><a href="applications/neuropsychology/">Neuropsychology</a></li><li><a href="applications/neurology/">Neurology</a></li><li><a href="applications/rehabilitation/">Rehabilitation</a></li><li><a href="applications/research/">Research</a></li></ul></div>
+      <div><h4>Science</h4><ul><li><a href="dc-potentials/">DC Potentials</a></li><li><a href="publications/">Research & Publications</a></li><li><a href="clinical-cases/">Clinical Cases</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="system/">System</a></li><li><a href="#process">How it works</a></li><li><a href="#output">Output</a></li><li><a href="about/">About</a></li><li><a href="contact/">Contact</a></li></ul></div>
     </div>
-    <div class="footer-bottom">
-      <span>© 2026 Neuro-Amea. For professional and research use.</span>
-      <span>Not a diagnostic device. Intended to complement, not replace, established clinical methods.</span>
-    </div>
+    <div class="footer-bottom"><span>© 2026 Neuro-Amea. For professional and research use.</span><span>Intended to complement, not replace, established professional methods.</span><span class="index-systems-credit">Made by <a href="https://www.index-systems.ru/" target="_blank" rel="noopener">INDEX Systems ↗</a></span></div>
   </div>
 </footer>
-
 <script src="assets/js/main.js"></script>
 </body>
 </html>
