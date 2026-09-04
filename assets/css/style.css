@@ -2207,3 +2207,258 @@ html,body{max-width:100%;overflow-x:hidden}body{min-width:320px}img,svg,canvas,v
 .neo-output-grid,.neo-system-grid{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)!important}.neo-flow{grid-template-columns:repeat(5,minmax(0,1fr))!important}.neo-app-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}.neo-science-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important}.neo-btn{width:auto!important}
 .internal-v2 .grid-2{grid-template-columns:repeat(2,minmax(0,1fr))!important}.internal-v2 .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))!important}.internal-v2 .grid-4{grid-template-columns:repeat(4,minmax(0,1fr))!important}.internal-v2 .footer-grid{grid-template-columns:minmax(240px,1.35fr) repeat(3,minmax(130px,.65fr))!important}.internal-v2 .footer-bottom{grid-template-columns:auto minmax(280px,1fr) auto!important}
 }
+
+
+/* =========================================================
+   V4.6 — FINAL UX / MOTION / NAVIGATION CORRECTION
+   ========================================================= */
+
+/* Header stays visually stable everywhere: logo never disappears. */
+.site-header,
+.home-header,
+.internal-v2 .site-header{
+  position:fixed!important;
+  top:0!important;left:0!important;right:0!important;
+  background:rgba(6,11,19,.86)!important;
+  border-bottom:1px solid rgba(255,255,255,.08)!important;
+  backdrop-filter:blur(22px) saturate(135%)!important;
+  -webkit-backdrop-filter:blur(22px) saturate(135%)!important;
+  box-shadow:none!important;
+}
+.logo,.logo-official{position:relative!important;z-index:104!important;opacity:1!important;visibility:visible!important}
+.logo img,.logo-official img{opacity:1!important;visibility:visible!important;filter:none!important}
+.menu-toggle{position:relative!important;z-index:104!important;background:rgba(255,255,255,.06)!important;border:1px solid rgba(255,255,255,.09)!important}
+.menu-toggle span{background:#fff!important}
+
+/* Mobile navigation: explicit visibility state + readable dropdowns. */
+@media(max-width:980px){
+  body.nav-open{overflow:hidden!important}
+  .primary-nav{
+    top:66px!important;
+    background:#07101d!important;
+    color:#fff!important;
+    opacity:1!important;
+    visibility:visible!important;
+  }
+  .primary-nav.open,
+  body.nav-open .primary-nav{transform:translateX(0)!important;opacity:1!important;visibility:visible!important}
+  .primary-nav>ul{margin:0!important;padding:0!important}
+  .primary-nav li{width:100%!important;display:block!important}
+  .primary-nav a,.primary-nav .nav-btn{color:#f5f8fc!important;-webkit-text-fill-color:#f5f8fc!important;opacity:1!important;visibility:visible!important}
+  .has-dropdown .dropdown{
+    display:none!important;
+    position:static!important;
+    opacity:1!important;
+    visibility:visible!important;
+    transform:none!important;
+    pointer-events:auto!important;
+    max-height:none!important;
+  }
+  .has-dropdown.open .dropdown{display:block!important}
+  .has-dropdown.open>.nav-btn{color:#8dbaff!important;-webkit-text-fill-color:#8dbaff!important}
+  .dropdown a{color:#eaf2ff!important;-webkit-text-fill-color:#eaf2ff!important}
+  .dropdown small{display:block!important;color:rgba(234,242,255,.52)!important;-webkit-text-fill-color:rgba(234,242,255,.52)!important}
+}
+
+/* Hero: lighter, wider and less vertically compressed on desktop. */
+.modern-hero-copy{max-width:980px!important}
+.modern-hero h1{max-width:980px!important}
+.modern-lede{max-width:760px!important}
+.modern-hero .hero-neural-canvas{z-index:0!important;opacity:.54!important;mix-blend-mode:screen!important}
+.modern-hero-shell{position:relative!important;z-index:2!important}
+.v31-neural-stage{z-index:2!important}
+.v31-neural-aura{animation:v46Aura 5.8s ease-in-out infinite alternate!important}
+.v31-neural-stage:before{animation:v46OrbitA 15s linear infinite!important}
+.v31-neural-stage:after{animation:v46OrbitB 19s linear infinite reverse!important}
+@keyframes v46Aura{from{transform:scale(.94);opacity:.62}to{transform:scale(1.08);opacity:1}}
+@keyframes v46OrbitA{to{transform:rotate(342deg)}}
+@keyframes v46OrbitB{to{transform:rotate(-336deg)}}
+
+/* Restore clear reveal motion throughout the site. */
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.reveal.is-visible{opacity:1;transform:none}
+.neo-app,.neo-science-card,.plain-card{transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease!important}
+
+@media(min-width:981px){
+  .modern-hero-shell{
+    grid-template-columns:minmax(0,1.12fr) minmax(420px,.88fr)!important;
+    gap:34px clamp(32px,4vw,64px)!important;
+  }
+  .modern-hero-copy{padding-top:10px!important}
+  .modern-hero h1{
+    font-size:clamp(4.1rem,5.75vw,6.55rem)!important;
+    line-height:.91!important;
+    letter-spacing:-.068em!important;
+    margin-bottom:24px!important;
+  }
+  .modern-lede{font-size:1rem!important;line-height:1.58!important;margin-bottom:24px!important}
+  .v31-neural-stage{min-height:540px!important}
+  #v31BrainCanvas{width:min(650px,100%)!important}
+}
+
+/* Tablet: keep the visual under copy, not behind it. */
+@media(min-width:600px) and (max-width:980px){
+  .modern-hero-shell{grid-template-columns:1fr!important}
+  .modern-hero-copy{max-width:820px!important}
+  .v31-neural-stage{order:2!important;min-height:430px!important;margin-top:-6px!important}
+  .modern-hero-rail{order:3!important}
+}
+
+/* Phone: animation is only BELOW text; background neural field is removed. */
+@media(max-width:599px){
+  .modern-hero .hero-neural-canvas{display:none!important}
+  .modern-hero{padding-top:86px!important;padding-bottom:28px!important}
+  .modern-hero-shell{grid-template-columns:1fr!important;gap:18px!important}
+  .modern-hero-copy{order:1!important}
+  .v31-neural-stage{order:2!important;min-height:260px!important;margin-top:4px!important;overflow:hidden!important}
+  #v31BrainCanvas{width:min(100%,420px)!important}
+  .v31-neural-caption{display:none!important}
+  .v31-neural-stage:before,.v31-neural-stage:after{opacity:.55!important}
+  .modern-hero h1{font-size:clamp(2.55rem,12.7vw,3.45rem)!important;line-height:.94!important;margin-bottom:16px!important}
+  .modern-lede{margin-bottom:18px!important}
+  .modern-proof-row{margin-top:18px!important}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1!important;transform:none!important;transition:none!important}
+  .v31-neural-aura,.v31-neural-stage:before,.v31-neural-stage:after{animation:none!important}
+}
+
+
+/* =========================================================
+   V4.7 — WHY IT MATTERS / COMPACT COMPOSITION
+   Restores the tighter 3-card composition from earlier builds.
+   ========================================================= */
+
+/* Phone: compact vertical sequence */
+.home-v24 .neo-layer-system{
+  max-width:1180px!important;
+  margin:0 auto!important;
+  padding:8px!important;
+  gap:8px!important;
+}
+.home-v24 .neo-layer-card{
+  min-height:150px!important;
+  padding:20px!important;
+  border-radius:22px!important;
+}
+.home-v24 .neo-layer-card strong{
+  font-size:clamp(1.55rem,8vw,2.05rem)!important;
+  line-height:1.02!important;
+}
+.home-v24 .neo-layer-card small{margin-top:16px!important}
+.home-v24 .neo-plus{
+  height:22px!important;
+  min-height:22px!important;
+  font-size:1.25rem!important;
+}
+.home-v24 .neo-vector{
+  height:26px!important;
+  min-height:26px!important;
+  margin:0!important;
+  font-size:1.55rem!important;
+}
+.home-v24 .neo-layer-result{
+  min-height:92px!important;
+  padding:20px!important;
+  border-radius:22px!important;
+}
+
+/* Tablet: still compact, no giant empty fields */
+@media(min-width:600px) and (max-width:980px){
+  .home-v24 .neo-layer-system{
+    grid-template-columns:1fr 28px 1fr!important;
+    align-items:stretch!important;
+    max-width:900px!important;
+  }
+  .home-v24 .neo-layer-card{
+    min-height:180px!important;
+    padding:22px!important;
+  }
+  .home-v24 .neo-layer-card.l3{
+    grid-column:1/2!important;
+  }
+  .home-v24 .neo-vector{
+    grid-column:2/3!important;
+    align-self:center!important;
+    transform:rotate(-90deg)!important;
+  }
+  .home-v24 .neo-layer-result{
+    grid-column:3/4!important;
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:flex-start!important;
+    justify-content:center!important;
+    gap:8px!important;
+  }
+  .home-v24 .neo-layer-result b{text-align:left!important}
+}
+
+/* Desktop: three equal cards in one row, plus signs between them,
+   arrow and interpretation immediately below. */
+@media(min-width:981px){
+  .home-v24 .neo-layer-system{
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr) 34px minmax(0,1fr) 34px minmax(0,1fr)!important;
+    grid-template-rows:auto 28px auto!important;
+    align-items:stretch!important;
+    max-width:1180px!important;
+    padding:10px!important;
+    gap:8px!important;
+    border-radius:30px!important;
+  }
+  .home-v24 .neo-layer-card{
+    min-height:205px!important;
+    padding:24px 24px 22px!important;
+    border-radius:22px!important;
+  }
+  .home-v24 .neo-layer-card strong{
+    font-size:clamp(1.7rem,2.05vw,2.25rem)!important;
+    line-height:1.01!important;
+  }
+  .home-v24 .neo-layer-card small{
+    margin-top:20px!important;
+    font-size:.75rem!important;
+  }
+  .home-v24 .neo-plus{
+    min-height:0!important;
+    height:auto!important;
+    align-self:center!important;
+    font-size:1.45rem!important;
+  }
+  .home-v24 .neo-vector{
+    grid-column:1/-1!important;
+    grid-row:2!important;
+    height:28px!important;
+    min-height:28px!important;
+    margin:0!important;
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    transform:none!important;
+    font-size:1.55rem!important;
+  }
+  .home-v24 .neo-layer-result{
+    grid-column:2/5!important;
+    grid-row:3!important;
+    min-height:78px!important;
+    padding:18px 26px!important;
+    border-radius:22px!important;
+    display:flex!important;
+    flex-direction:row!important;
+    align-items:center!important;
+    justify-content:space-between!important;
+    gap:24px!important;
+  }
+  .home-v24 .neo-layer-result b{
+    margin:0!important;
+    text-align:right!important;
+    font-size:1.02rem!important;
+  }
+}
+
+/* Large desktop: don't let this block stretch just because the viewport is huge */
+@media(min-width:1440px){
+  .home-v24 .neo-layer-system{max-width:1240px!important}
+  .home-v24 .neo-layer-card{min-height:210px!important}
+}
